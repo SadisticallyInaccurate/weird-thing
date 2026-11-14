@@ -11,6 +11,11 @@
       gtag('js', new Date());
       gtag('config', 'G-HWLK0PZVBM', { send_page_view: false });
     </script>
+    <script>
+      // Prevent scripts in the proxy UI from spawning unsolicited popup windows.
+      // Normal links (including links opened by the browser) are unaffected.
+      window.open = function () { return null; };
+    </script>
     <script type="module" crossorigin src="./B5XiAeVc.js"></script>
     <link rel="modulepreload" crossorigin href="./chunks/C9Pixl2X.js">
   </head>
