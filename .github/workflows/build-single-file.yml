@@ -1,0 +1,28 @@
+name: Build single-file HTML
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build HTML
+        run: npm run build:single
+
+      - name: Upload HTML
+        uses: actions/upload-artifact@v4
+        with:
+          name: single-file-html
+          path: single-file.html
