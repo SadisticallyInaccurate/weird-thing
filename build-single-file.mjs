@@ -51,7 +51,7 @@ function inlineCssUrls(css, cssFile) {
 try {
   const result = spawnSync("npx", [
     "--yes", "esbuild@0.25.0", "B5XiAeVc.js", "--bundle", "--format=esm",
-    "--platform=browser", "--target=es2020", `--outfile=${jsOut}`,
+    "--platform=browser", "--target=es2022", `--outfile=${jsOut}`,
     "--loader:.svg=dataurl", "--loader:.png=dataurl", "--loader:.jpg=dataurl",
     "--loader:.jpeg=dataurl", "--loader:.gif=dataurl", "--loader:.webp=dataurl",
     "--loader:.woff=dataurl", "--loader:.woff2=dataurl", "--loader:.ttf=dataurl",
